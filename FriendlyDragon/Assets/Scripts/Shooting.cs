@@ -19,11 +19,7 @@ namespace Bananagodzilla
 
 
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
+      
 
         // Update is called once per frame
         void Update()
@@ -43,7 +39,7 @@ namespace Bananagodzilla
             }
             
             timer--;
-            Debug.Log(timer);
+           // Debug.Log(timer);
         }
     }
 }
