@@ -26,7 +26,8 @@ namespace Bananagodzilla
         {
             if (col.CompareTag("Player"))
             {
-                
+           Destroy(gameObject); 
+           Debug.Log("Looted");
             }
         }
     }

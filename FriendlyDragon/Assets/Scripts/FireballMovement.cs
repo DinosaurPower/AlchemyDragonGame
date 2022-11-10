@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 namespace Bananagodzilla
@@ -20,7 +21,8 @@ namespace Bananagodzilla
         public float DragonDir;
         public string BallType;
         public GameObject Wall;
-        
+        public float attackRange = 1f;
+        public LayerMask enemyLayer;
         // Start is called before the first frame update
         void Start()
         {
@@ -50,12 +52,15 @@ namespace Bananagodzilla
 
             if (timer >= limit)
             {
-                if (BallType == "build"|| BallType == "clone"|| BallType == "telep")
+                if (BallType == "build"|| BallType == "clone")
                 {
                     Instantiate(Wall, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
                 }
                 
-                
+                if (BallType == "telep")
+                {
+                    Wall.transform.Translate(gameObject.GetComponent<Transform>().position);
+                }
                 Destroy(gameObject);
               
             }
@@ -89,21 +94,23 @@ namespace Bananagodzilla
                     }
                 }
 
-                if (BallType == "telep")
+                if (BallType == "telep" || BallType == "clone")
                 {
                     if (col.CompareTag("Enemy"))
                     {
                         Wall = col.gameObject;
-                       Destroy(col.gameObject);
                     }
                 }
 
-                if (BallType == "clone")
+             
+
+                if (BallType == "nuclear")
                 {
-                    if (col.CompareTag("Enemy"))
+                    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(gameObject.GetComponent<Transform>().position, attackRange, enemyLayer);
+                    foreach(Collider2D enemy in hitEnemies)
                     {
-                        Wall = col.gameObject;
-                        
+                        Debug.Log("Hit" + enemy.name);
+                       
                     }
                 }
              
