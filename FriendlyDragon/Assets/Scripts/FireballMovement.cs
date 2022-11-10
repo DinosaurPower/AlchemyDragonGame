@@ -77,8 +77,8 @@ namespace Bananagodzilla
                     if (col.CompareTag("Enemy"))
                     {
                        
-                        Debug.Log("shot");
-                        
+                        col.GetComponent<HealthNpc>().Hurt();
+                        Debug.Log("hurt");
                         Destroy(gameObject);
                     }
                 }
@@ -87,8 +87,8 @@ namespace Bananagodzilla
                 {
                     if (col.CompareTag("Enemy"))
                     {
-                       
-                        Debug.Log("interacted");
+
+                        col.GetComponent<HealthNpc>().Interact();
                         
                         Destroy(gameObject);
                     }
@@ -109,7 +109,9 @@ namespace Bananagodzilla
                     Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(gameObject.GetComponent<Transform>().position, attackRange, enemyLayer);
                     foreach(Collider2D enemy in hitEnemies)
                     {
-                        Debug.Log("Hit" + enemy.name);
+                        enemy.GetComponent<HealthNpc>().Hurt();
+                        Debug.Log("Combustion");
+                        Destroy(gameObject);
                        
                     }
                 }
