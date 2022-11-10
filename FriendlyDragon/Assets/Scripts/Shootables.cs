@@ -32,6 +32,7 @@ public class Shootables : MonoBehaviour
         }
 
         currentItem = elements[Counter];
+        gameObject.GetComponent<Shooting>().projectile = currentItem.projectile;
         selectedItem.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
         
     }

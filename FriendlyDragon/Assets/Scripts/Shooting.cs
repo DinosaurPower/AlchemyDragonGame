@@ -33,7 +33,7 @@ namespace Bananagodzilla
                 timer = timerAmount;
             }
 
-            if (timer < -20)
+            if (timer < -60)
             {
                 spriteRenderer.sprite = sprites[0];
             }

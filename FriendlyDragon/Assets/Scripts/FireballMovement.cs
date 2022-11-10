@@ -18,12 +18,8 @@ namespace Bananagodzilla
        public float limit = 1f;
         public Flip direction;
         public float DragonDir;
-        
-        public bool Const;
-        public bool Dest;
-        public bool Inter;
-        
-        
+        public string BallType;
+        public GameObject Wall;
         
         // Start is called before the first frame update
         void Start()
@@ -54,9 +50,9 @@ namespace Bananagodzilla
 
             if (timer >= limit)
             {
-                if (Dest)
+                if (BallType == "build"|| BallType == "clone"|| BallType == "telep")
                 {
-                     Debug.Log("TIt's alive!");
+                    Instantiate(Wall, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
                 }
                 
                 
@@ -71,29 +67,54 @@ namespace Bananagodzilla
         private void OnTriggerEnter2D(Collider2D col)
         {
             
-                if (Dest)
+                if (BallType == "dest")
                 {
                     if (col.CompareTag("Enemy"))
                     {
                        
                         Debug.Log("shot");
                         
-                   
+                        Destroy(gameObject);
+                    }
+                }
+                
+                if (BallType == "inter")
+                {
+                    if (col.CompareTag("Enemy"))
+                    {
+                       
+                        Debug.Log("interacted");
+                        
+                        Destroy(gameObject);
                     }
                 }
 
-                if (!Dest && !Const && !Inter)
+                if (BallType == "telep")
                 {
-                    Debug.Log("shot smol");
+                    if (col.CompareTag("Enemy"))
+                    {
+                        Wall = col.gameObject;
+                       Destroy(col.gameObject);
+                    }
                 }
+
+                if (BallType == "clone")
+                {
+                    if (col.CompareTag("Enemy"))
+                    {
+                        Wall = col.gameObject;
+                        
+                    }
+                }
+             
+               
                 
-                
-                Destroy(gameObject);
+             
             
         }
 
 
-        //var enemyComponent = GetComponent<EnemyHealth>();
+       
     }
 
 }

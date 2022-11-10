@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7211894881558812333}
   - component: {fileID: 7211894881558812332}
   m_Layer: 0
-  m_Name: DestructiveFireball
+  m_Name: TeleportBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 0.15566039, b: 0.21527603, a: 1}
+  m_Color: {r: 1, g: 0.8448516, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   limit: 1
   direction: {fileID: 0}
   DragonDir: 0
-  BallType: dest
+  BallType: telep
   Wall: {fileID: 5274684750249974204, guid: 2da363a53d38e4ea791c2c172623718e, type: 3}
 --- !u!50 &7211894881558812332
 Rigidbody2D:
