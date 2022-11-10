@@ -7,17 +7,18 @@ namespace Bananagodzilla
     public class Item : MonoBehaviour
     {
         public string ItemName;
-        
-        // Start is called before the first frame update
-        void Start()
-        {
 
+        public int ItemAmount = 1;
+        public GameObject projectile;
+
+        public void spent()
+        {
+            ItemAmount--;
         }
 
-        // Update is called once per frame
-        void Update()
+        public void earned()
         {
-
+            ItemAmount++;
         }
     }
 }
