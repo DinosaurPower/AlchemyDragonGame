@@ -25,7 +25,7 @@ namespace Bananagodzilla
         void Update()
         {
             
-            if (Input.GetKeyDown(keycodes[0]) && timer <= 0)
+            if ((Input.GetKeyDown(keycodes[0])||(Input.GetKeyDown(keycodes[1]))) && timer <= 0)
             {
 
                 spriteRenderer.sprite = sprites[1];
