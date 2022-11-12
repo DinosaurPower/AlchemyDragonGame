@@ -8,7 +8,7 @@ namespace Bananagodzilla
     {
         public string ItemName;
 
-        public int ItemAmount = 1;
+        public int ItemAmount = 100;
         public GameObject projectile;
 
         public void spent()
