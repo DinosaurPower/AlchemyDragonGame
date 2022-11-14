@@ -15,8 +15,15 @@ namespace Bananagodzilla
         public GameObject Talk;
         public float Health;
         public GameObject[] dropping;
+        public TextMesh HPText;
+        private void Start()
+        {
+            if (HPText == null)
+            {
+                HPText = gameObject.GetComponentInChildren<TextMesh>();
+            }
+        }
 
-    
 
         private void Update()
         {
@@ -26,6 +33,14 @@ namespace Bananagodzilla
                 {
                     Instantiate(drop, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
                 }
+                
+                Destroy(gameObject);
+            }
+
+
+            if (HPText != null)
+            {
+                HPText.text = Health.ToString()+"HP";
             }
         }
 

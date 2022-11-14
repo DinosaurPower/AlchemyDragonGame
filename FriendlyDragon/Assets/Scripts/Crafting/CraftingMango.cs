@@ -38,7 +38,7 @@ namespace Bananagodzilla
                    {
                        //if (mouseposition.x >> kdlks && mouseposition << eiofiej
                        //remove middle slot
-                       float dist = Vector2.Distance(Input.mousePosition, slot.transform.position);
+                       float dist = Vector2.Distance(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0.0f)), slot.transform.position);
                        if (dist < shortestDistance)
                        {
                            shortestDistance = dist;
@@ -108,14 +108,28 @@ public void OnClickSLot(ItemSlot slot)
     slot.gameObject.SetActive(false);
     CheckForCompletedRecipes();
 }
-        public void OnMouseDown(Item item)
-        {
+
+
+public void OnMouseDown(Item item)
+{
             if (currentItem == null)
             {
                 currentItem = item;
                 customCursor.gameObject.SetActive(true);
                 customCursor.sprite = currentItem.GetComponent<Image>().sprite;
             }
-        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

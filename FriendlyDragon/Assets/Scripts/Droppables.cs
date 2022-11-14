@@ -10,9 +10,12 @@ namespace Bananagodzilla
     public class Droppables : MonoBehaviour
     {
         public GameObject looted;
+
+        public string lootableElement;
         // Start is called before the first frame update
         void Start()
         {
+          //  looted = GameObject.Find(lootableElement);
 
         }
 
@@ -26,6 +29,7 @@ namespace Bananagodzilla
         {
             if (col.CompareTag("Player"))
             {
+               
            Destroy(gameObject); 
            Debug.Log("Looted");
             }

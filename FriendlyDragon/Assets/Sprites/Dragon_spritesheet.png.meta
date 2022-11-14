@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7bcf0f1c2510742e3a3f27b2b1a8ab07
+guid: c26ccbccaa86647bb93e21f06d479e19
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,43 +128,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_Artwork 137_0
+      name: Dragon_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1391
-        height: 1403
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 238
+        y: 1391
+        width: 615
+        height: 576
+      alignment: 9
+      pivot: {x: 0.48174226, y: 0.49372992}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78db34edc3ed540e8b4708fa3361054d
-      internalID: -51160684
+      spriteID: 1ce0cfb6f22674662a9f3ebb8d12837b
+      internalID: 1640596128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled_Artwork 137_1
+      name: Dragon_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1423
-        y: 341
-        width: 1262
-        height: 1562
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 93, y: 0, z: 0, w: 0}
+        x: 200
+        y: 354
+        width: 1165
+        height: 909
+      alignment: 9
+      pivot: {x: 0.15933038, y: 0.43662092}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c6e7a0a1d32d4494b27fc9848885c4f
-      internalID: 1817435093
+      spriteID: a133303d9b08b46e9b8bceff3488b27e
+      internalID: 1228426909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dragon_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 424
+        width: 1152
+        height: 1479
+      alignment: 9
+      pivot: {x: 0.62224704, y: 0.30523443}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479ee02c3dcda451ebd447e2dc07703a
+      internalID: -1504587972
       vertices: []
       indices: 
       edges: []
@@ -180,8 +201,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Untitled_Artwork 137_0: -51160684
-      Untitled_Artwork 137_1: 1817435093
+      Dragon_spritesheet_1: 1228426909
+      Dragon_spritesheet_0: 1640596128
+      Dragon_spritesheet_2: -1504587972
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
