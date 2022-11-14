@@ -55,6 +55,8 @@ namespace Bananagodzilla
                 }
             }
         }
+        
+        
 void CheckForCompletedRecipes(){
     resultSlot.gameObject.SetActive(false);
     resultSlot.item = null;
@@ -84,6 +86,20 @@ void CheckForCompletedRecipes(){
 
 
 }
+
+
+
+public void Craft()
+{
+    if (resultSlot.item != null){
+    foreach (ItemSlot slot in craftingSlots)
+    {
+        slot.item.spent();
+    }
+    resultSlot.item.earned();
+    }
+}
+
 
 public void OnClickSLot(ItemSlot slot)
 {
