@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7963485816012478177}
   - component: {fileID: 7963485816012478176}
   - component: {fileID: 7963485816012478190}
-  - component: {fileID: -852593665877476024}
+  - component: {fileID: -4033175733200697027}
   m_Layer: 0
-  m_Name: DroppableSulfur
+  m_Name: DroppableMercury
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e7b8df17aea7d496ca5d1764d9aefcaa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e837d01fdddbe421a9ff84b7b3cb65f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253493d2908742f8976861bb9ac89d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  looted: {fileID: 0}
---- !u!61 &-852593665877476024
+  looted: {fileID: 621018886503736509, guid: a4ae4606f0fcb4b55b0022da98aacba0, type: 3}
+--- !u!61 &-4033175733200697027
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
