@@ -11,28 +11,57 @@ namespace Bananagodzilla
     {
         public GameObject looted;
 
-        public string lootableElement;
+        public int elementNum;
+
+        public ListOfElements list;
         // Start is called before the first frame update
         void Start()
         {
-          //  looted = GameObject.Find(lootableElement);
-
+           
+            list = FindObjectOfType(typeof(ListOfElements)) as ListOfElements;
+            
+           
         }
 
-        // Update is called once per frame
         void Update()
         {
+            if (looted == null)
+            {
+                looted = list.listOfElemets[elementNum];
+              
+            }
 
+           
         }
+     
 
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (col.CompareTag("Player"))
             {
-               
-           Destroy(gameObject); 
-           Debug.Log("Looted");
+                StartCoroutine(Loot());
+                // Debug.Log("Looted");
             }
+        }
+
+
+        IEnumerator Loot()
+        {
+            
+                if (looted != null)
+                {
+                    if (looted.GetComponent<Item>() != null)
+                    {
+                        
+                        looted.GetComponent<Item>().earned();
+                        Debug.Log("Achieved");
+                    }
+                }
+                yield return new WaitForSeconds(.1f);
+                
+                Destroy(gameObject); 
+        
         }
     }
 }
+

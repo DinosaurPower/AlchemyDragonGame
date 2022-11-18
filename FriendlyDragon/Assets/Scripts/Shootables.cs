@@ -5,37 +5,44 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Shootables : MonoBehaviour
+namespace Bananagodzilla
 {
 
-    public Item[] elements;
-    public Item currentItem;
-    public KeyCode[] shootKey;
-    public int Counter;
-    public TMP_Text resourceAmount;
-    public GameObject selectedItem;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public class Shootables : MonoBehaviour
     {
-        
-        if (Input.GetKeyDown(shootKey[0]) || Input.GetKeyDown(shootKey[1]))
+
+        public Item[] elements;
+        public Item currentItem;
+        public KeyCode[] shootKey;
+        public int Counter;
+        public TMP_Text resourceAmount;
+
+        public GameObject selectedItem;
+
+        // Start is called before the first frame update
+        void Start()
         {
-            Counter++;
-            if (Counter == elements.Length)
-            {
-                Counter = 0;
-            }
+
         }
 
-        currentItem = elements[Counter];
-        gameObject.GetComponent<Shooting>().projectile = currentItem.projectile;
-        selectedItem.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
-        resourceAmount.text = currentItem.ItemAmount.ToString();
+        // Update is called once per frame
+        void Update()
+        {
+
+            if (Input.GetKeyDown(shootKey[0]) || Input.GetKeyDown(shootKey[1]))
+            {
+                Counter++;
+                if (Counter == elements.Length)
+                {
+                    Counter = 0;
+                }
+            }
+
+            currentItem = elements[Counter];
+            gameObject.GetComponent<Shooting>().projectile = currentItem.projectile;
+            selectedItem.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
+            resourceAmount.text = currentItem.ItemAmount.ToString();
+        }
     }
 }

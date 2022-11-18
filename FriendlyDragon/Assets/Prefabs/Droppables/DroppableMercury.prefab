@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looted: {fileID: 621018886503736509, guid: a4ae4606f0fcb4b55b0022da98aacba0, type: 3}
-  lootableElement: Mercury
+  elementNum: 2
+  list: {fileID: 0}
 --- !u!61 &-4033175733200697027
 BoxCollider2D:
   m_ObjectHideFlags: 0
