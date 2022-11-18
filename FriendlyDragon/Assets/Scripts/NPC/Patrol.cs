@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Bananagodzilla
 {
@@ -13,6 +14,10 @@ namespace Bananagodzilla
         public override State RunCurrentState()
         {
             
+            
+            
+            
+            
             if (CanSeeDragon)
             {
                 return chasestate;
@@ -23,6 +28,8 @@ namespace Bananagodzilla
             }
    
         }
+
+      
 
      
     }
