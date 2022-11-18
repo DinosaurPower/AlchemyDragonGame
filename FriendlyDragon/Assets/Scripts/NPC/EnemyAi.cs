@@ -7,12 +7,16 @@ namespace Bananagodzilla
 {
     public class EnemyAi : MonoBehaviour
     {
-
+        public Chase chase;
         public Patrol patrol;
 
         private void Start()
         {
             patrol = GetComponentInChildren<Patrol>();
+            chase = GetComponentInChildren<Chase>();
+
+            patrol.enemy = gameObject;
+            chase.enemy = gameObject;
         }
 
 
