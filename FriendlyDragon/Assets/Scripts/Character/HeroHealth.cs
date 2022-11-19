@@ -26,7 +26,7 @@ namespace Bananagodzilla
             }
         }
 
-        private void OnTriggerStay2D(Collider other)
+        private void OnTriggerStay2D(Collider2D other)
         { Debug.Log("interacted");
             if (other.GetComponent<DamageHolder>() != null)
             {
@@ -35,7 +35,7 @@ namespace Bananagodzilla
             }
         }
 
-        private void OnTriggerEnter2D(Collider other)
+        private void OnTriggerEnter2D(Collider2D other)
         { Debug.Log("interacted");
             if (other.GetComponent<DamageHolder>() != null)
             {Debug.Log("IsAttacking");
