@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 99783894}
   - component: {fileID: 99783893}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12284,6 +12284,7 @@ GameObject:
   - component: {fileID: 1577219051}
   - component: {fileID: 1577219052}
   - component: {fileID: 1577219053}
+  - component: {fileID: 1577219054}
   m_Layer: 3
   m_Name: Knight
   m_TagString: Enemy
@@ -12450,6 +12451,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chase: {fileID: 0}
   patrol: {fileID: 0}
+--- !u!114 &1577219054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577219046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43285fe3625914fa1a48b6519a798623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
 --- !u!1 &1589652182
 GameObject:
   m_ObjectHideFlags: 0
@@ -13002,6 +13016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  HealthBar: {fileID: 99783893}
 --- !u!70 &1858073884
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

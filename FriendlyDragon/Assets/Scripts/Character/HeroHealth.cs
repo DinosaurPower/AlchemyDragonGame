@@ -26,19 +26,28 @@ namespace Bananagodzilla
             }
         }
 
-        private void OnTriggerStay(Collider other)
-        {
+        private void OnTriggerStay2D(Collider other)
+        { Debug.Log("interacted");
             if (other.GetComponent<DamageHolder>() != null)
             {
-                Hurt(other.GetComponent<DamageHolder>().damage);
+                Debug.Log("IsAttacking");
+                StartCoroutine(Hurt(other.GetComponent<DamageHolder>().damage));
             }
         }
-        
-        
+
+        private void OnTriggerEnter2D(Collider other)
+        { Debug.Log("interacted");
+            if (other.GetComponent<DamageHolder>() != null)
+            {Debug.Log("IsAttacking");
+                StartCoroutine(Hurt(other.GetComponent<DamageHolder>().damage));
+            }
+        }
+
+
         IEnumerator Hurt(int Damage)
         {
 
-
+Debug.Log("outch");
             maxHealth -= Damage;
             yield return new WaitForSeconds(1f);
             
