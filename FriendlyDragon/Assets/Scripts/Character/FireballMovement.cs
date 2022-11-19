@@ -111,9 +111,10 @@ namespace Bananagodzilla
                     {
                         enemy.GetComponent<HealthNpc>().Hurt();
                         Debug.Log("Combustion");
-                        Destroy(gameObject);
+                        
                        
                     }
+                    Destroy(gameObject);
                 }
              
                

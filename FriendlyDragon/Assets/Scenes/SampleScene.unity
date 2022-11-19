@@ -298,7 +298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &294388970
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1400,9 +1400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragon: {fileID: 0}
-  speed: 0
+  speed: -4
   enemy: {fileID: 0}
-  isViolent: 0
 --- !u!1 &569226959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,7 +1889,6 @@ MonoBehaviour:
   dragon: {fileID: 0}
   speed: 3
   enemy: {fileID: 0}
-  isViolent: 1
 --- !u!4 &668647593
 Transform:
   m_ObjectHideFlags: 0
@@ -2481,29 +2479,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chase: {fileID: 0}
+  chase: {fileID: 541395012}
   patrol: {fileID: 1589652184}
---- !u!50 &1015323694
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!58 &1015323694
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015323686}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 14.24
 --- !u!1 &1062453549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3664,7 +3657,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5ee32bba60d5343af8040b1b3c6f77f3, type: 3}
+  m_Sprite: {fileID: 1093329882, guid: f448bb5027c4f48fda9b81bb1b708315, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
