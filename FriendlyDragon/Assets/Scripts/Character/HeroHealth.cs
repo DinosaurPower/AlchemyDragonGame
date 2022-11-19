@@ -26,14 +26,7 @@ namespace Bananagodzilla
             }
         }
 
-        private void OnTriggerStay2D(Collider2D other)
-        { Debug.Log("interacted");
-            if (other.GetComponent<DamageHolder>() != null)
-            {
-                Debug.Log("IsAttacking");
-                StartCoroutine(Hurt(other.GetComponent<DamageHolder>().damage));
-            }
-        }
+      
 
         private void OnTriggerEnter2D(Collider2D other)
         { Debug.Log("interacted");
@@ -47,9 +40,9 @@ namespace Bananagodzilla
         IEnumerator Hurt(int Damage)
         {
 
-Debug.Log("outch");
+
             maxHealth -= Damage;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(60f);
             
         
         }
