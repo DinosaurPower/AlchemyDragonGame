@@ -10262,7 +10262,7 @@ Transform:
   m_GameObject: {fileID: 939348161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5851015, y: 1.5851015, z: 1.5851015}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 140934464}
@@ -11369,6 +11369,7 @@ GameObject:
   - component: {fileID: 1374885844}
   - component: {fileID: 1374885843}
   - component: {fileID: 1374885842}
+  - component: {fileID: 1374885845}
   m_Layer: 3
   m_Name: Knightt
   m_TagString: Enemy
@@ -11452,6 +11453,27 @@ MonoBehaviour:
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   - {fileID: 7963485816012478179, guid: 1f58d93edeccf472abc8a1550f5b5706, type: 3}
   HPText: {fileID: 0}
+--- !u!50 &1374885845
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374885840}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1386563604
 GameObject:
   m_ObjectHideFlags: 0
@@ -11756,7 +11778,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8e79a0da438194cc1849cf8201793f1e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 725ad7b609f5d405a83b815107628ac2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12022,6 +12044,7 @@ GameObject:
   - component: {fileID: 1530747089}
   - component: {fileID: 1530747091}
   - component: {fileID: 1530747090}
+  - component: {fileID: 1530747092}
   m_Layer: 3
   m_Name: Coww
   m_TagString: Enemy
@@ -12092,6 +12115,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.21, y: 5.96}
   m_EdgeRadius: 0
+--- !u!50 &1530747092
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530747088}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1557334097
 GameObject:
   m_ObjectHideFlags: 0
@@ -12344,6 +12388,7 @@ GameObject:
   - component: {fileID: 1577219051}
   - component: {fileID: 1577219052}
   - component: {fileID: 1577219053}
+  - component: {fileID: 1577219054}
   m_Layer: 3
   m_Name: Knight
   m_TagString: Untagged
@@ -12464,6 +12509,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chase: {fileID: 0}
   patrol: {fileID: 0}
+--- !u!50 &1577219054
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577219046}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1589652182
 GameObject:
   m_ObjectHideFlags: 0
@@ -12728,7 +12794,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1820047132, guid: 4b1ef939d743e463cabe9e996aabce2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12974,8 +13040,8 @@ MonoBehaviour:
   keycodes: 7000000071000000
   spriteRenderer: {fileID: 1410736145}
   sprites:
-  - {fileID: 21300000, guid: 20b9e85396d394f779d208ae8216dcbf, type: 3}
-  - {fileID: 21300000, guid: 8e79a0da438194cc1849cf8201793f1e, type: 3}
+  - {fileID: 21300000, guid: c5a2310cda62546e4ba81c2e491c33c4, type: 3}
+  - {fileID: 21300000, guid: 725ad7b609f5d405a83b815107628ac2, type: 3}
   ObjSelect: {fileID: 0}
   selectedElement: {fileID: 0}
 --- !u!114 &1858073882
