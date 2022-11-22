@@ -71,6 +71,11 @@ namespace Bananagodzilla
 
         private void OnTriggerEnter2D(Collider2D col)
         {
+            if (BallType == "build")
+            {
+                Instantiate(Wall, GetComponent<Transform>().position, GetComponent<Transform>().rotation);
+                Destroy(gameObject);
+            }
             
                 if (BallType == "dest")
                 {
@@ -98,18 +103,22 @@ namespace Bananagodzilla
                 {
                     if (col.CompareTag("Enemy"))
                     {
-                        Wall = col.gameObject;
+                        Wall = col.gameObject.GetComponentInParent<GameObject>();
                     }
                 }
 
              
 
-                if (BallType == "nuclear")
+                if (BallType == "atom")
                 {
                     Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(gameObject.GetComponent<Transform>().position, attackRange, enemyLayer);
                     foreach(Collider2D enemy in hitEnemies)
                     {
-                        enemy.GetComponent<HealthNpc>().Hurt();
+                        if (enemy.GetComponent<HealthNpc>() != null)
+                        {
+                            enemy.GetComponent<HealthNpc>().Hurt(); 
+                        }
+                        
                         Debug.Log("Combustion");
                         
                        

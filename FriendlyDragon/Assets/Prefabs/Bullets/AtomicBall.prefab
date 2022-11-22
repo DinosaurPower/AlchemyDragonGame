@@ -132,7 +132,7 @@ MonoBehaviour:
   DragonDir: 0
   BallType: atom
   Wall: {fileID: 5274684750249974204, guid: 2da363a53d38e4ea791c2c172623718e, type: 3}
-  attackRange: 1
+  attackRange: 10
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8

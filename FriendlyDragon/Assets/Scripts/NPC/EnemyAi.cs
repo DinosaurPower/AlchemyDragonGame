@@ -9,14 +9,15 @@ namespace Bananagodzilla
     {
         public Chase chase;
         public Patrol patrol;
-
+        public HealthNpc realEnemy;
         private void Start()
         {
+            realEnemy = GetComponentInParent<HealthNpc>();
             patrol = GetComponentInChildren<Patrol>();
             chase = GetComponentInChildren<Chase>();
 
-            patrol.enemy = gameObject;
-            chase.enemy = gameObject;
+            patrol.enemy = realEnemy.gameObject;
+            chase.enemy = realEnemy.gameObject;
         }
 
 
