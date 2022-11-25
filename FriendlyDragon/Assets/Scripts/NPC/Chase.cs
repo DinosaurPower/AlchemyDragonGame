@@ -7,10 +7,11 @@ namespace Bananagodzilla
 {
     public class Chase : State
     {
+        public bool CanSeeDragon;
         public GameObject dragon;
         public float speed;
         public GameObject enemy;
-
+        public Patrol patrolState;
         public override State RunCurrentState()
         {
             if (dragon == null)
@@ -18,9 +19,24 @@ namespace Bananagodzilla
                 dragon = GameObject.FindGameObjectWithTag("Player");
             }
             enemy.transform.position = Vector2.MoveTowards(transform.position, dragon.GetComponent<Transform>().position, speed*Time.deltaTime);
+            if (enemy.transform.position.x < dragon.GetComponent<Transform>().position.x)
+            {
+                enemy.GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
+
+            if (enemy.transform.position.x > dragon.GetComponent<Transform>().position.x)
+            {
+                enemy.GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
             
-            Debug.Log("DragonDetected");
-            return this;
+            if (!CanSeeDragon)
+            {
+                return patrolState;
+            }
+            else
+            {
+                return this;   
+            }
         }
 
     }

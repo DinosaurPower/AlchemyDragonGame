@@ -26,6 +26,16 @@ namespace Bananagodzilla
             if (col.CompareTag("Player"))
             {
                 patrol.CanSeeDragon = true;
+               chase.CanSeeDragon = true;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag("Player"))
+            {
+               chase.CanSeeDragon = false;
+               patrol.CanSeeDragon = false;
             }
         }
     }

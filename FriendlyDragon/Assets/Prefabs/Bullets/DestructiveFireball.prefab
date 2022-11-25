@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 0.15566039, b: 0.21527603, a: 1}
   m_FlipX: 0
@@ -132,6 +132,10 @@ MonoBehaviour:
   DragonDir: 0
   BallType: dest
   Wall: {fileID: 5274684750249974204, guid: 2da363a53d38e4ea791c2c172623718e, type: 3}
+  attackRange: 1
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &7211894881558812332
 Rigidbody2D:
   serializedVersion: 4

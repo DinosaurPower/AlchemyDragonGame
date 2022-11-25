@@ -10,10 +10,10 @@ namespace Bananagodzilla
     {
         public TMP_Text text;
         public string ItemName;
-
-        public int ItemAmount = 100;
+        public int itemCode;
+        public int ItemAmount;
         public GameObject projectile;
-
+        public ListOfElements list;
 
         public void Start()
         {
@@ -21,6 +21,8 @@ namespace Bananagodzilla
             {
                 text = GetComponentInChildren<TMP_Text>();
             }
+            list = FindObjectOfType(typeof(ListOfElements)) as ListOfElements;
+       
         }
 
         private void Update()
@@ -29,16 +31,23 @@ namespace Bananagodzilla
             {
                 text.text = ItemAmount.ToString();
             }
+
+            ItemAmount = list.countOfElements[itemCode];
+  
         }
 
         public void spent()
         {
             ItemAmount--;
+            list.countOfElements[itemCode]--;
         }
 
         public void earned()
         {
             ItemAmount++;
+          list.countOfElements[itemCode]++;
         }
+
+      
     }
 }

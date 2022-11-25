@@ -79,18 +79,21 @@ namespace Bananagodzilla
             
                 if (BallType == "dest")
                 {
-                    if (col.CompareTag("Enemy"))
-                    {
-                       
-                        col.GetComponent<HealthNpc>().Hurt();
-                        Debug.Log("hurt");
-                        Destroy(gameObject);
-                    }
+                    
+                        if (col.GetComponent<HealthNpc>() != null)
+                        {
+                            col.GetComponent<HealthNpc>().Hurt();
+                            Debug.Log("hurt");
+                            Destroy(gameObject);
+                        }
+                        
+                        
+                    
                 }
                 
                 if (BallType == "inter")
                 {
-                    if (col.CompareTag("Enemy"))
+                    if (col.GetComponent<HealthNpc>() != null)
                     {
 
                         col.GetComponent<HealthNpc>().Interact();
@@ -101,7 +104,7 @@ namespace Bananagodzilla
 
                 if (BallType == "telep" || BallType == "clone")
                 {
-                    if (col.CompareTag("Enemy"))
+                    if (col.GetComponent<HealthNpc>() != null)
                     {
                         Wall = col.gameObject.GetComponentInParent<GameObject>();
                     }
@@ -119,7 +122,7 @@ namespace Bananagodzilla
                             enemy.GetComponent<HealthNpc>().Hurt(); 
                         }
                         
-                        Debug.Log("Combustion");
+                       
                         
                        
                     }

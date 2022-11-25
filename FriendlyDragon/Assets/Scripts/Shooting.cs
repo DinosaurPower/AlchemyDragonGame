@@ -37,10 +37,12 @@ namespace Bananagodzilla
             
             if ((Input.GetKeyDown(keycodes[0])||(Input.GetKeyDown(keycodes[1]))) && timer <= 0f && selectedElement.ItemAmount >0)
             {
-selectedElement.spent();
+
+                ObjSelect.Shot();
                 spriteRenderer.sprite = sprites[1];
                 Instantiate(projectile, firePosition.position, firePosition.rotation);
                 timer = timerAmount;
+           
             }
 
             if (timer < -60)
@@ -49,6 +51,7 @@ selectedElement.spent();
             }
             
             timer--;
+            
            // Debug.Log(timer);
         }
     }

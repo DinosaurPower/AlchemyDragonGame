@@ -19,9 +19,18 @@ namespace Bananagodzilla
         public GameObject enemy;
         public override State RunCurrentState()
         {
-           
+            chasestate.patrolState = this;
 
             enemy.transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, speed*Time.deltaTime);
+            if (enemy.transform.position.x < moveSpots[randomSpot].position.x)
+            {
+                enemy.GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
+
+            if (enemy.transform.position.x > moveSpots[randomSpot].position.x)
+            {
+                enemy.GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
 
             if (Vector2.Distance(transform.position, moveSpots[randomSpot].position)< 1f)
             {

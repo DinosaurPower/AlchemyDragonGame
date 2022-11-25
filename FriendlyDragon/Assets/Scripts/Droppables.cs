@@ -9,7 +9,7 @@ namespace Bananagodzilla
 
     public class Droppables : MonoBehaviour
     {
-        public GameObject looted;
+       
 
         public int elementNum;
 
@@ -25,11 +25,7 @@ namespace Bananagodzilla
 
         void Update()
         {
-            if (looted == null)
-            {
-                looted = list.listOfElemets[elementNum];
-              
-            }
+            
 
            
         }
@@ -48,15 +44,13 @@ namespace Bananagodzilla
         IEnumerator Loot()
         {
             
-                if (looted != null)
-                {
-                    if (looted.GetComponent<Item>() != null)
-                    {
+                
+                    
                         
-                        looted.GetComponent<Item>().earned();
+                      list.Increase(elementNum);
                         Debug.Log("Achieved");
-                    }
-                }
+                    
+                
                 yield return new WaitForSeconds(.1f);
                 
                 Destroy(gameObject); 

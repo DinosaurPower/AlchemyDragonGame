@@ -16,14 +16,21 @@ namespace Bananagodzilla
         public Item currentItem;
         public KeyCode[] shootKey;
         public int Counter;
+        public ListOfElements list;
         public TMP_Text resourceAmount;
-
+        public int itemAmount;
         public GameObject selectedItem;
 
         // Start is called before the first frame update
         void Start()
         {
+            list = FindObjectOfType(typeof(ListOfElements)) as ListOfElements;
 
+        }
+        public void Shot()
+        {
+            list.countOfElements[Counter]--;
+            currentItem.ItemAmount = list.countOfElements[Counter];
         }
 
         // Update is called once per frame
@@ -40,9 +47,15 @@ namespace Bananagodzilla
             }
 
             currentItem = elements[Counter];
+            currentItem.ItemAmount = list.countOfElements[Counter];
             gameObject.GetComponent<Shooting>().projectile = currentItem.projectile;
             selectedItem.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
             resourceAmount.text = currentItem.ItemAmount.ToString();
         }
+
+        
+     
+       
     }
+    
 }
