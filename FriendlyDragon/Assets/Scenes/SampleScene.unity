@@ -15300,6 +15300,7 @@ GameObject:
   - component: {fileID: 143915700}
   - component: {fileID: 143915699}
   - component: {fileID: 143915698}
+  - component: {fileID: 143915702}
   m_Layer: 3
   m_Name: Knightt
   m_TagString: Enemy
@@ -15408,6 +15409,26 @@ MonoBehaviour:
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   HPText: {fileID: 0}
+--- !u!95 &143915702
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143915696}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2380e19ba4a45402a8a8b2e171fec2fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &145089894
 GameObject:
   m_ObjectHideFlags: 0
@@ -17495,6 +17516,7 @@ GameObject:
   - component: {fileID: 384414456}
   - component: {fileID: 384414455}
   - component: {fileID: 384414454}
+  - component: {fileID: 384414458}
   m_Layer: 3
   m_Name: Knightt
   m_TagString: Enemy
@@ -17603,6 +17625,26 @@ MonoBehaviour:
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   HPText: {fileID: 0}
+--- !u!95 &384414458
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384414452}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2380e19ba4a45402a8a8b2e171fec2fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &384615092
 GameObject:
   m_ObjectHideFlags: 0
@@ -26592,6 +26634,7 @@ GameObject:
   - component: {fileID: 1061253606}
   - component: {fileID: 1061253605}
   - component: {fileID: 1061253604}
+  - component: {fileID: 1061253608}
   m_Layer: 3
   m_Name: Knightt
   m_TagString: Enemy
@@ -26700,6 +26743,26 @@ MonoBehaviour:
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   HPText: {fileID: 0}
+--- !u!95 &1061253608
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061253602}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2380e19ba4a45402a8a8b2e171fec2fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1062453549
 GameObject:
   m_ObjectHideFlags: 0
@@ -35615,6 +35678,7 @@ GameObject:
   - component: {fileID: 1374885843}
   - component: {fileID: 1374885842}
   - component: {fileID: 1374885845}
+  - component: {fileID: 1374885846}
   m_Layer: 3
   m_Name: Knightt
   m_TagString: Enemy
@@ -35723,6 +35787,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1374885846
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374885840}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2380e19ba4a45402a8a8b2e171fec2fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1381686374
 GameObject:
   m_ObjectHideFlags: 0
@@ -38148,6 +38232,7 @@ GameObject:
   - component: {fileID: 1616433205}
   - component: {fileID: 1616433204}
   - component: {fileID: 1616433203}
+  - component: {fileID: 1616433207}
   m_Layer: 3
   m_Name: Knightt
   m_TagString: Enemy
@@ -38256,6 +38341,26 @@ MonoBehaviour:
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   HPText: {fileID: 0}
+--- !u!95 &1616433207
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616433201}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2380e19ba4a45402a8a8b2e171fec2fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1620067334
 GameObject:
   m_ObjectHideFlags: 0
@@ -40816,6 +40921,7 @@ GameObject:
   - component: {fileID: 1951597231}
   - component: {fileID: 1951597230}
   - component: {fileID: 1951597229}
+  - component: {fileID: 1951597233}
   m_Layer: 3
   m_Name: Knightt
   m_TagString: Enemy
@@ -40924,6 +41030,26 @@ MonoBehaviour:
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   - {fileID: 7963485816012478179, guid: 5b41e494e619e401cb5f72642f59e21e, type: 3}
   HPText: {fileID: 0}
+--- !u!95 &1951597233
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951597227}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2380e19ba4a45402a8a8b2e171fec2fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1971885224
 GameObject:
   m_ObjectHideFlags: 0

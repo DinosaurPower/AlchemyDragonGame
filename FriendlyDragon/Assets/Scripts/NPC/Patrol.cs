@@ -15,6 +15,7 @@ namespace Bananagodzilla
         public Chase chasestate;
         private int randomSpot;
         private float waitTime = 1;
+        public Animator anim;
         public float startWaitTime;
         public GameObject enemy;
         public override State RunCurrentState()
@@ -36,11 +37,14 @@ namespace Bananagodzilla
             {
                 if (waitTime <= 0)
                 {
+                    anim.SetBool("Walk", true);
                     randomSpot = Random.Range(0, moveSpots.Length-1);
                     waitTime = startWaitTime;
                 }
                 else
                 {
+                    
+                    anim.SetBool("Walk", false);
                     waitTime -= Time.deltaTime;
                 }
             }
