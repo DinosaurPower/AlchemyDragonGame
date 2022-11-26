@@ -13,7 +13,7 @@ namespace Bananagodzilla
         public HealthNpc realEnemy;
         private void Start()
         {
-            anim = GetComponentInChildren<Animator>();
+            anim = GetComponentInParent<Animator>();
             realEnemy = GetComponentInParent<HealthNpc>();
             patrol = GetComponentInChildren<Patrol>();
             chase = GetComponentInChildren<Chase>();
