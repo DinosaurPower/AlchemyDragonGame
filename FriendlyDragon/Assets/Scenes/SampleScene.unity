@@ -18322,6 +18322,7 @@ GameObject:
   - component: {fileID: 456254798}
   - component: {fileID: 456254797}
   - component: {fileID: 456254796}
+  - component: {fileID: 456254800}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Enemy
@@ -18448,6 +18449,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &456254800
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456254794}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 306ded9fdf42b4812855fdaea27d0dea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &474784779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18589,7 +18610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486919664}
   m_LocalRotation: {x: -0, y: -0, z: -0.16573206, w: 0.9861708}
-  m_LocalPosition: {x: 1.8, y: -1.6, z: 0}
+  m_LocalPosition: {x: 0.77, y: -1.6, z: 0}
   m_LocalScale: {x: 1.1040567, y: 1.0724912, z: 0.16130267}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18638,7 +18659,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 2076969287, guid: 4b1ef939d743e463cabe9e996aabce2b, type: 3}
-  m_Color: {r: 0.7568628, g: 0.7176471, b: 0.5803922, a: 1}
+  m_Color: {r: 0.6603774, g: 0.6167676, b: 0.46413317, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26141,6 +26162,7 @@ GameObject:
   - component: {fileID: 1015323693}
   - component: {fileID: 1015323692}
   - component: {fileID: 1015323694}
+  - component: {fileID: 1015323695}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Enemy
@@ -26267,6 +26289,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 14.24
+--- !u!95 &1015323695
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015323686}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 306ded9fdf42b4812855fdaea27d0dea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1026875482
 GameObject:
   m_ObjectHideFlags: 0
@@ -34756,6 +34798,7 @@ GameObject:
   - component: {fileID: 1242460800}
   - component: {fileID: 1242460799}
   - component: {fileID: 1242460798}
+  - component: {fileID: 1242460801}
   m_Layer: 3
   m_Name: Uni
   m_TagString: Enemy
@@ -34850,6 +34893,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &1242460801
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242460796}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fbce78c8540ee4bfeb6a0a86793f61a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1242662452
 GameObject:
   m_ObjectHideFlags: 0
@@ -36688,6 +36751,7 @@ GameObject:
   - component: {fileID: 1450038845}
   - component: {fileID: 1450038844}
   - component: {fileID: 1450038843}
+  - component: {fileID: 1450038847}
   m_Layer: 0
   m_Name: Cow
   m_TagString: Enemy
@@ -36814,6 +36878,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1450038847
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450038841}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 306ded9fdf42b4812855fdaea27d0dea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1479871893
 GameObject:
   m_ObjectHideFlags: 0
@@ -41186,7 +41270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982767032}
   m_LocalRotation: {x: -0, y: -0, z: -0.16573206, w: 0.9861708}
-  m_LocalPosition: {x: 0.7, y: -1.2, z: 0}
+  m_LocalPosition: {x: 1.49, y: -1.96, z: 0}
   m_LocalScale: {x: 1.1040567, y: 1.0724912, z: 0.16130267}
   m_ConstrainProportionsScale: 0
   m_Children: []
