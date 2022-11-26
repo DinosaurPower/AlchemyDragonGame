@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: 3
@@ -429,6 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: 3
@@ -15900,6 +15902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: -4
@@ -16472,6 +16475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 0}
   patrol: {fileID: 0}
   realEnemy: {fileID: 0}
@@ -17291,6 +17295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 906346182}
   patrol: {fileID: 1504549667}
   realEnemy: {fileID: 0}
@@ -17786,6 +17791,7 @@ MonoBehaviour:
   - {fileID: 1986583511}
   CanSeeDragon: 0
   chasestate: {fileID: 1947279573}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 1947279571}
 --- !u!1 &398820489
@@ -17986,6 +17992,7 @@ MonoBehaviour:
   - {fileID: 1058234803}
   CanSeeDragon: 0
   chasestate: {fileID: 89001092}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 1616433201}
 --- !u!1 &425850376
@@ -18017,6 +18024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: 3
@@ -18384,6 +18392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 1947279573}
   patrol: {fileID: 396882200}
   realEnemy: {fileID: 0}
@@ -18552,6 +18561,7 @@ MonoBehaviour:
   - {fileID: 1756949430}
   CanSeeDragon: 0
   chasestate: {fileID: 1620067336}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 1620067334}
 --- !u!1 &486919664
@@ -18650,6 +18660,7 @@ GameObject:
   - component: {fileID: 488084266}
   - component: {fileID: 488084265}
   - component: {fileID: 488084264}
+  - component: {fileID: 488084267}
   m_Layer: 3
   m_Name: Parrot
   m_TagString: Enemy
@@ -18743,6 +18754,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.65, y: 1.8}
   m_EdgeRadius: 0
+--- !u!95 &488084267
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488084262}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23fd451903826447390545212be6dc0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &490703349
 GameObject:
   m_ObjectHideFlags: 0
@@ -19345,6 +19376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 1620067336}
   patrol: {fileID: 479241022}
   realEnemy: {fileID: 0}
@@ -19449,6 +19481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: -4
@@ -23966,7 +23999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655400743}
   m_LocalRotation: {x: -0, y: -0, z: 0.86503386, w: -0.50171345}
-  m_LocalPosition: {x: 0.84375936, y: -0.9367301, z: 0}
+  m_LocalPosition: {x: 0.21, y: -0.43, z: 0}
   m_LocalScale: {x: 1.197464, y: 1.1753149, z: 0.1417702}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24054,6 +24087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: 3
@@ -24124,6 +24158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 0}
   patrol: {fileID: 0}
   realEnemy: {fileID: 0}
@@ -24565,6 +24600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: -4
@@ -25180,6 +25216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: -4
@@ -25436,6 +25473,7 @@ MonoBehaviour:
   - {fileID: 89087642}
   CanSeeDragon: 0
   chasestate: {fileID: 1828074819}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 143915696}
 --- !u!1 &939348161
@@ -25570,6 +25608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 786270579}
   patrol: {fileID: 970776232}
   realEnemy: {fileID: 0}
@@ -25675,6 +25714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 0}
   patrol: {fileID: 0}
   realEnemy: {fileID: 0}
@@ -25948,6 +25988,7 @@ MonoBehaviour:
   - {fileID: 352276158}
   CanSeeDragon: 0
   chasestate: {fileID: 786270579}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 1054705958}
 --- !u!1 &997208824
@@ -26206,6 +26247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 541395012}
   patrol: {fileID: 1589652184}
   realEnemy: {fileID: 0}
@@ -26382,6 +26424,7 @@ GameObject:
   - component: {fileID: 1054705961}
   - component: {fileID: 1054705960}
   - component: {fileID: 1054705959}
+  - component: {fileID: 1054705963}
   m_Layer: 3
   m_Name: Parrot
   m_TagString: Enemy
@@ -26475,6 +26518,26 @@ Transform:
   m_Father: {fileID: 1260335050}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1054705963
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054705958}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23fd451903826447390545212be6dc0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1054989521
 GameObject:
   m_ObjectHideFlags: 0
@@ -26848,6 +26911,7 @@ MonoBehaviour:
   - {fileID: 1097377131}
   CanSeeDragon: 0
   chasestate: {fileID: 668647592}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 1374885840}
 --- !u!1 &1076793803
@@ -27160,6 +27224,7 @@ MonoBehaviour:
   - {fileID: 378436924}
   CanSeeDragon: 0
   chasestate: {fileID: 425850377}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 384414452}
 --- !u!1 &1123585025
@@ -34956,6 +35021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 0}
   patrol: {fileID: 0}
   realEnemy: {fileID: 0}
@@ -36692,6 +36758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 214591581}
   patrol: {fileID: 1626822493}
   realEnemy: {fileID: 0}
@@ -36887,6 +36954,7 @@ MonoBehaviour:
   - {fileID: 325395910}
   CanSeeDragon: 0
   chasestate: {fileID: 906346182}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 488084262}
 --- !u!1 &1513902332
@@ -37684,6 +37752,7 @@ MonoBehaviour:
   - {fileID: 1345603611}
   CanSeeDragon: 0
   chasestate: {fileID: 1686380800}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 1061253602}
 --- !u!1 &1576419838
@@ -37901,6 +37970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 0}
   patrol: {fileID: 0}
   realEnemy: {fileID: 0}
@@ -37960,6 +38030,7 @@ MonoBehaviour:
   - {fileID: 384615093}
   CanSeeDragon: 0
   chasestate: {fileID: 541395012}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 541395010}
 --- !u!1 &1595646315
@@ -38410,6 +38481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: -4
@@ -38471,6 +38543,7 @@ MonoBehaviour:
   - {fileID: 556063782}
   CanSeeDragon: 0
   chasestate: {fileID: 214591581}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 214591579}
 --- !u!1 &1629754337
@@ -38523,6 +38596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb41f5845ac64623b0a57e44290687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   chase: {fileID: 0}
   patrol: {fileID: 0}
   realEnemy: {fileID: 0}
@@ -38716,7 +38790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660828907}
   m_LocalRotation: {x: -0, y: -0, z: 0.86503386, w: -0.50171345}
-  m_LocalPosition: {x: 0.84375936, y: -0.9367301, z: 0}
+  m_LocalPosition: {x: 0.32, y: -0.51, z: 0}
   m_LocalScale: {x: 1.197464, y: 1.1753149, z: 0.1417702}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39029,6 +39103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: 3
@@ -39434,6 +39509,7 @@ MonoBehaviour:
   - {fileID: 1313390071}
   CanSeeDragon: 0
   chasestate: {fileID: 4686730}
+  anim: {fileID: 0}
   startWaitTime: 5
   enemy: {fileID: 1951597227}
 --- !u!1 &1724282440
@@ -39849,6 +39925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: 3
@@ -40834,6 +40911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04d3c82b17ec4ea3a6946ae37e990fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   CanSeeDragon: 0
   dragon: {fileID: 0}
   speed: -4
