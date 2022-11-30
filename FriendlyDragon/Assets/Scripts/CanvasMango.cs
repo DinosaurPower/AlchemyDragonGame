@@ -26,11 +26,15 @@ namespace Bananagodzilla
                     modes[1].SetActive(true);
                     modes[0].SetActive(false);
                     Crafting = true;
+                    
+                    
                 } 
                 else {
                     modes[0].SetActive(true);
                     modes[1].SetActive(false);
                     Crafting = false;
+                  
+                 
                 }
             }
         }

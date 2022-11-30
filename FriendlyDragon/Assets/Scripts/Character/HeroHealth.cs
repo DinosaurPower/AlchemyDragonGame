@@ -29,9 +29,9 @@ namespace Bananagodzilla
       
 
         private void OnTriggerEnter2D(Collider2D other)
-        { Debug.Log("interacted");
+        { 
             if (other.GetComponent<DamageHolder>() != null)
-            {Debug.Log("IsAttacking");
+            {
                 StartCoroutine(Hurt(other.GetComponent<DamageHolder>().damage));
             }
         }

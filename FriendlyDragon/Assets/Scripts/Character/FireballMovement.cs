@@ -128,7 +128,13 @@ namespace Bananagodzilla
                     }
                     Destroy(gameObject);
                 }
-             
+
+
+
+                if (col.GetComponent<BullsEye>() != null)
+                {
+                    col.GetComponent<BullsEye>().Hitt();
+                }
                
                 
              

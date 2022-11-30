@@ -16,20 +16,20 @@ namespace Bananagodzilla
         public override State RunCurrentState()
         {
             if (dragon == null)
-            {
-                dragon = GameObject.FindGameObjectWithTag("Player");
-            }
-            anim.SetBool("Walk", true);
-            enemy.transform.position = Vector2.MoveTowards(transform.position, dragon.GetComponent<Transform>().position, speed*Time.deltaTime);
-            if (enemy.transform.position.x < dragon.GetComponent<Transform>().position.x)
-            {
-                enemy.GetComponentInChildren<SpriteRenderer>().flipX = true;
-            }
-
-            if (enemy.transform.position.x > dragon.GetComponent<Transform>().position.x)
-            {
-                enemy.GetComponentInChildren<SpriteRenderer>().flipX = false;
-            }
+                         {
+                             dragon = GameObject.FindGameObjectWithTag("Player");
+                         }
+                         anim.SetBool("Walk", true);
+                         enemy.transform.position = Vector2.MoveTowards(transform.position, dragon.GetComponent<Transform>().position, speed*Time.deltaTime);
+                         if (enemy.transform.position.x < dragon.GetComponent<Transform>().position.x)
+                         {
+                             enemy.GetComponentInChildren<SpriteRenderer>().flipX = true;
+                         }
+             
+                         if (enemy.transform.position.x > dragon.GetComponent<Transform>().position.x)
+                         {
+                             enemy.GetComponentInChildren<SpriteRenderer>().flipX = false;
+                         }
             
             if (!CanSeeDragon)
             {

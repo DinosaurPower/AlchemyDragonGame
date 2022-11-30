@@ -8,38 +8,98 @@ namespace Bananagodzilla
     public class EnemyAi : MonoBehaviour
     {
         public Animator anim;
-        public Chase chase;
-        public Patrol patrol;
+        public float runSpeed;
         public HealthNpc realEnemy;
+        public GameObject dragon;
+        public float speed;
+        public Transform[] moveSpots;
+        private int randomSpot;
+        private float waitTime = 1;
+        public float startWaitTime;
+        public Transform target;
+
         private void Start()
         {
             anim = GetComponentInParent<Animator>();
             realEnemy = GetComponentInParent<HealthNpc>();
-            patrol = GetComponentInChildren<Patrol>();
-            chase = GetComponentInChildren<Chase>();
-            patrol.anim = anim;
-            chase.anim = anim;
-            patrol.enemy = realEnemy.gameObject;
-            chase.enemy = realEnemy.gameObject;
+            randomSpot =   UnityEngine.Random.Range(0, moveSpots.Length - 1);
+            target = moveSpots[randomSpot];
+            if (dragon == null)
+            {
+                dragon = GameObject.FindGameObjectWithTag("Player");
+            }
+
+
         }
 
+        void Update()
+        {
+            realEnemy.transform.position =
+                Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            if (realEnemy.transform.position.x < target.position.x)
+            {
+                realEnemy.GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
 
-        private void OnTriggerEnter2D(Collider2D col)
+            if (realEnemy.transform.position.x > target.position.x)
+            {
+                realEnemy.GetComponentInChildren<SpriteRenderer>().flipX = false;
+            }
+
+
+
+            if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 1f)
+            {
+                if (waitTime <= 0)
+                {
+                    if (anim != false)
+                    {
+                        anim.SetBool("Walk", true);
+                    }
+
+                    randomSpot = UnityEngine.Random.Range(0, moveSpots.Length - 1);
+                    target = moveSpots[randomSpot];
+                    waitTime = startWaitTime;
+                    
+                }
+                else
+                {
+                    if (anim != false)
+                    {
+                        anim.SetBool("Walk", false);
+                    }
+                   
+                    waitTime -= Time.deltaTime;
+                }
+            }
+            
+        }
+        
+        void OnTriggerEnter2D(Collider2D col)
         {
             if (col.CompareTag("Player"))
             {
-                patrol.CanSeeDragon = true;
-               chase.CanSeeDragon = true;
+
+
+                target = dragon.transform;
+
             }
         }
 
-        private void OnTriggerExit2D(Collider2D other)
+        void OnTriggerExit2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
-               chase.CanSeeDragon = false;
-               patrol.CanSeeDragon = false;
+
+                target = moveSpots[randomSpot];
+
+
+
             }
         }
+        
+        
+        
+        
     }
 }

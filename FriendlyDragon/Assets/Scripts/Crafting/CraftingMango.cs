@@ -91,6 +91,7 @@ void CheckForCompletedRecipes(){
 
 public void Craft()
 {
+    if (craftingSlots[0].item.ItemAmount>= 0 && craftingSlots[1].item.ItemAmount>= 0)
     if (resultSlot.item != null){
     foreach (ItemSlot slot in craftingSlots)
     {
