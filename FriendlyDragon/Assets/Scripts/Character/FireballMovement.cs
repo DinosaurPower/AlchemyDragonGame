@@ -12,7 +12,7 @@ namespace Bananagodzilla
     public class FireballMovement : MonoBehaviour
     {
         // Start is called before the first frame update
-
+        public GameObject egg;
         public float projectileSpeed;
         public Rigidbody2D rigidbody;
         private float timer;
@@ -35,8 +35,12 @@ namespace Bananagodzilla
             DragonDir = direction.Direction;
             rigidbody = GetComponent<Rigidbody2D>();
             if (DragonDir <0){  rigidbody.velocity = transform.right * projectileSpeed;} 
-            if (DragonDir >0) {rigidbody.velocity = transform.right * projectileSpeed*-1;} 
-            
+            if (DragonDir >0) {rigidbody.velocity = transform.right * projectileSpeed*-1;}
+
+            if (egg == null)
+            {
+                egg = GameObject.Find("Dragon_egg");
+            }
             
 
 
@@ -61,6 +65,17 @@ namespace Bananagodzilla
                 {
                     Wall.transform.Translate(gameObject.GetComponent<Transform>().position);
                 }
+                
+                
+                if (BallType == "revive")
+                {
+                    egg.transform.position = gameObject.transform.position;
+                    if (egg.GetComponent<Egg>() != null)
+                    {
+                        egg.GetComponent<Egg>().Close();
+                    }
+                }
+                
                 Destroy(gameObject);
               
             }
@@ -77,6 +92,8 @@ namespace Bananagodzilla
                 Destroy(gameObject);
             }
             
+            
+            
                 if (BallType == "dest")
                 {
                     
@@ -87,8 +104,17 @@ namespace Bananagodzilla
                             Destroy(gameObject);
                         }
                         
-                        
                     
+                }
+
+                if (BallType == "revive")
+                {
+                    egg.transform.position = gameObject.transform.position;
+                    if (egg.GetComponent<Egg>() != null)
+                    {
+                        egg.GetComponent<Egg>().Close();
+                    }
+                    Destroy(gameObject);
                 }
                 
                 if (BallType == "inter")

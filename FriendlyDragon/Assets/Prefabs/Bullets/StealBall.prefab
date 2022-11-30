@@ -130,7 +130,7 @@ MonoBehaviour:
   limit: 1
   direction: {fileID: 0}
   DragonDir: 0
-  BallType: steal
+  BallType: revive
   Wall: {fileID: 5274684750249974204, guid: 2da363a53d38e4ea791c2c172623718e, type: 3}
   attackRange: 1
   enemyLayer:
