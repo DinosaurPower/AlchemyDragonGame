@@ -19,11 +19,12 @@ namespace Bananagodzilla
         // Update is called once per frame
         void Update()
         {
-
+            
         }
 
         public void Close()
         {
+            GameMango.instance.spawnPosition = transform.position;
             if (gameObject.GetComponent<SpriteRenderer>().sprite != closed)
             {
                 gameObject.GetComponent<SpriteRenderer>().sprite = closed;

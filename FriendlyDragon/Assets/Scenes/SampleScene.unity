@@ -18026,6 +18026,12 @@ MonoBehaviour:
   - mercurysalt
   - mercurysulfur
   - sulfurmercury
+  - Airmercury
+  - mercuryAir
+  - Earthsulfur
+  - sulfurEarth
+  - Firesalt
+  - saltFire
   recipeResults:
   - {fileID: 3554201449533035604}
   - {fileID: 3554201449533035604}
@@ -18033,6 +18039,12 @@ MonoBehaviour:
   - {fileID: 3554201450665035146}
   - {fileID: 3554201449871177476}
   - {fileID: 3554201449871177476}
+  - {fileID: -5669170586653715360, guid: c58406987e85e44ec9c5a92c038cd535, type: 3}
+  - {fileID: -5669170586653715360, guid: c58406987e85e44ec9c5a92c038cd535, type: 3}
+  - {fileID: -5669170586653715360, guid: c58406987e85e44ec9c5a92c038cd535, type: 3}
+  - {fileID: -5669170586653715360, guid: c58406987e85e44ec9c5a92c038cd535, type: 3}
+  - {fileID: -5669170586653715360, guid: c58406987e85e44ec9c5a92c038cd535, type: 3}
+  - {fileID: -5669170586653715360, guid: c58406987e85e44ec9c5a92c038cd535, type: 3}
   resultSlot: {fileID: 1242662456}
 --- !u!4 &446929239
 Transform:
@@ -18579,7 +18591,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.801916
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -18780,7 +18792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &569226960
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22956,7 +22968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &633210489
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26500,7 +26512,7 @@ MonoBehaviour:
   - {fileID: 2925472869401422219}
   - {fileID: 2925472870733208325}
   - {fileID: 2925472870151417229}
-  countOfElements: 00000000030000000000000000000000000000000000000000000000
+  countOfElements: 03000000030000000300000003000000030000000300000003000000
 --- !u!4 &1123585027
 Transform:
   m_ObjectHideFlags: 0
@@ -38770,6 +38782,8 @@ GameObject:
   - component: {fileID: 1757609327}
   - component: {fileID: 1757609329}
   - component: {fileID: 1757609330}
+  - component: {fileID: 1757609331}
+  - component: {fileID: 1757609332}
   m_Layer: 0
   m_Name: Dragon_egg
   m_TagString: Untagged
@@ -38872,6 +38886,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f147a762643149f8b0aeec139961606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closed: {fileID: 21300000, guid: 0431ea7f93c3b412aa251bafca5cdf2e, type: 3}
+--- !u!114 &1757609331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757609326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5d1b1fcd43c4835bacf14c0d994292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  spawnPosition: {x: 0, y: 0}
+  egg: {fileID: 1757609330}
+--- !u!50 &1757609332
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757609326}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 3
 --- !u!1 &1758841634
 GameObject:
   m_ObjectHideFlags: 0
@@ -39394,6 +39445,7 @@ GameObject:
   - component: {fileID: 1858073882}
   - component: {fileID: 1858073883}
   - component: {fileID: 1858073884}
+  - component: {fileID: 1858073885}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Player
@@ -39560,6 +39612,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.16268098, y: -0.1273157}
   m_Size: {x: 1.6458404, y: 1.9336478}
   m_Direction: 0
+--- !u!114 &1858073885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858073876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee8257d709104bfdbc5a30224df5f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1860966350
 GameObject:
   m_ObjectHideFlags: 0
@@ -42673,6 +42737,7 @@ GameObject:
   - component: {fileID: 3554201450665035146}
   - component: {fileID: 8236716896974953110}
   - component: {fileID: 1664167877424505103}
+  - component: {fileID: 8236716896974953111}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -42692,6 +42757,7 @@ GameObject:
   - component: {fileID: 3554201449251291532}
   - component: {fileID: 8236716897156619920}
   - component: {fileID: 1664167879250863369}
+  - component: {fileID: 8236716897156619921}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -42711,6 +42777,7 @@ GameObject:
   - component: {fileID: 3554201449533035604}
   - component: {fileID: 8236716897973783368}
   - component: {fileID: 1664167878423343313}
+  - component: {fileID: 8236716897973783369}
   m_Layer: 0
   m_Name: Air
   m_TagString: Untagged
@@ -42730,6 +42797,7 @@ GameObject:
   - component: {fileID: 3554201449871177476}
   - component: {fileID: 8236716897769941016}
   - component: {fileID: 1664167878761272193}
+  - component: {fileID: 8236716897769941017}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -43758,6 +43826,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2925472869401422219}
   m_CullTransparentMesh: 1
+--- !u!114 &8236716896974953111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925472869401422219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 446929238}
+          m_TargetAssemblyTypeName: Bananagodzilla.CraftingMango, Assembly-CSharp
+          m_MethodName: OnMouseDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3554201450665035146}
+            m_ObjectArgumentAssemblyTypeName: Bananagodzilla.Item, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!222 &8236716897156619920
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43766,6 +43863,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2925472870151417229}
   m_CullTransparentMesh: 1
+--- !u!114 &8236716897156619921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925472870151417229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 446929238}
+          m_TargetAssemblyTypeName: Bananagodzilla.CraftingMango, Assembly-CSharp
+          m_MethodName: OnMouseDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3554201449251291532}
+            m_ObjectArgumentAssemblyTypeName: Bananagodzilla.Item, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!222 &8236716897769941016
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43774,6 +43900,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2925472870733208325}
   m_CullTransparentMesh: 1
+--- !u!114 &8236716897769941017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925472870733208325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 446929238}
+          m_TargetAssemblyTypeName: Bananagodzilla.CraftingMango, Assembly-CSharp
+          m_MethodName: OnMouseDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3554201449871177476}
+            m_ObjectArgumentAssemblyTypeName: Bananagodzilla.Item, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!222 &8236716897973783368
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43782,6 +43937,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2925472870400260181}
   m_CullTransparentMesh: 1
+--- !u!114 &8236716897973783369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925472870400260181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 446929238}
+          m_TargetAssemblyTypeName: Bananagodzilla.CraftingMango, Assembly-CSharp
+          m_MethodName: OnMouseDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3554201449533035604}
+            m_ObjectArgumentAssemblyTypeName: Bananagodzilla.Item, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!224 &8348327444088163866
 RectTransform:
   m_ObjectHideFlags: 0

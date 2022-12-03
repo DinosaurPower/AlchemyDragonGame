@@ -67,6 +67,7 @@ void CheckForCompletedRecipes(){
         if (item != null)
         {
             currentrecipestring += item.ItemName;
+            Debug.Log(currentrecipestring);
         }
         else
         {
