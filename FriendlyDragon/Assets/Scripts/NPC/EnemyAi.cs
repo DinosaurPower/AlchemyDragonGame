@@ -12,6 +12,7 @@ namespace Bananagodzilla
         public HealthNpc realEnemy;
         public GameObject dragon;
         public float speed;
+        private float basicSpeed;
         public Transform[] moveSpots;
         private int randomSpot;
         private float waitTime = 1;
@@ -20,6 +21,7 @@ namespace Bananagodzilla
 
         private void Start()
         {
+            basicSpeed = speed;
             anim = GetComponentInParent<Animator>();
             realEnemy = GetComponentInParent<HealthNpc>();
             randomSpot =   UnityEngine.Random.Range(0, moveSpots.Length - 1);
@@ -32,10 +34,15 @@ namespace Bananagodzilla
 
         }
 
-        void Update()
+        private void FixedUpdate()
         {
             realEnemy.transform.position =
-                Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                Vector2.MoveTowards(transform.position, target.position, basicSpeed * Time.deltaTime);
+        }
+
+        void Update()
+        {
+            
             if (realEnemy.transform.position.x < target.position.x)
             {
                 realEnemy.GetComponentInChildren<SpriteRenderer>().flipX = true;
@@ -79,10 +86,9 @@ namespace Bananagodzilla
         {
             if (col.CompareTag("Player"))
             {
-
-
+                
                 target = dragon.transform;
-
+                basicSpeed = runSpeed;
             }
         }
 
@@ -92,7 +98,7 @@ namespace Bananagodzilla
             {
 
                 target = moveSpots[randomSpot];
-
+                basicSpeed = speed;
 
 
             }

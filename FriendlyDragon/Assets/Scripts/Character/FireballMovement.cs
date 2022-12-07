@@ -16,7 +16,7 @@ namespace Bananagodzilla
         public float projectileSpeed;
         public Rigidbody2D rigidbody;
         private float timer;
-       public float limit = 1f;
+       public float limit = 0.5f;
         public Flip direction;
         public float DragonDir;
         public string BallType;
@@ -132,7 +132,7 @@ namespace Bananagodzilla
                 {
                     if (col.GetComponent<HealthNpc>() != null)
                     {
-                        Wall = col.gameObject.GetComponentInParent<GameObject>();
+                        Wall = col.gameObject.GetComponent<HealthNpc>().copyable;
                     }
                 }
 

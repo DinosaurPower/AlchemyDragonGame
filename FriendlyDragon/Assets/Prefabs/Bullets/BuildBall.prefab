@@ -126,9 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450c8acdb5b2242e5b42d510c3149724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 10
+  egg: {fileID: 0}
+  projectileSpeed: 15
   rigidbody: {fileID: 0}
-  limit: 1
+  limit: 0.5
   direction: {fileID: 0}
   DragonDir: 0
   BallType: build

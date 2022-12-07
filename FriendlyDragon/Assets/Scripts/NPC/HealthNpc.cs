@@ -10,6 +10,7 @@ namespace Bananagodzilla
 
     public class HealthNpc : MonoBehaviour
     {
+        public GameObject copyable;
         public string Interactable;
         public TMP_Text Text;
         public GameObject Talk;
@@ -18,6 +19,10 @@ namespace Bananagodzilla
         public TextMesh HPText;
         private void Start()
         {
+            if (copyable == null)
+            {
+                copyable = GetComponent<GameObject>();
+            }
             if (HPText == null)
             {
                 HPText = gameObject.GetComponentInChildren<TextMesh>();

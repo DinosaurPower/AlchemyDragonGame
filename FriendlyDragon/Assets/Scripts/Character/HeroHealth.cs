@@ -26,25 +26,14 @@ namespace Bananagodzilla
             }
         }
 
-      
-
-        private void OnTriggerEnter2D(Collider2D other)
-        { 
-            if (other.GetComponent<DamageHolder>() != null)
-            {
-                StartCoroutine(Hurt(other.GetComponent<DamageHolder>().damage));
-            }
-        }
-
-
-        IEnumerator Hurt(int Damage)
+        public void Hurt(int hurt)
         {
-
-
-            maxHealth -= Damage;
-            yield return new WaitForSeconds(60f);
-            
-        
+            maxHealth-= hurt;
         }
+
+       
+
+
+        
     }
 }
