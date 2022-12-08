@@ -7,7 +7,7 @@ namespace Bananagodzilla
 {
     public class DamageHolder : MonoBehaviour
     {
-
+        public bool IsHurting = true;
         public int damage;
 
 
@@ -23,13 +23,16 @@ namespace Bananagodzilla
         
         IEnumerator Hurt(HeroHealth heroHealth)
         {
+            if (IsHurting == true)
+            {
+                heroHealth.Hurt(damage);
+                Debug.Log("Waited");
+                IsHurting = false;
+            }
+            yield return new WaitForSeconds(5);
 
-            heroHealth.Hurt(damage);
-            Debug.Log("Waited");
-            yield return new WaitForSeconds(150f);
-            
-            
-        
+            IsHurting = true;
+
         }
     }
 }

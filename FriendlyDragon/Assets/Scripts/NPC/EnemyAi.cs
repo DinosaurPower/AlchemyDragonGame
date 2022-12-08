@@ -38,10 +38,6 @@ namespace Bananagodzilla
         {
             realEnemy.transform.position =
                 Vector2.MoveTowards(transform.position, target.position, basicSpeed * Time.deltaTime);
-        }
-
-        void Update()
-        {
             
             if (realEnemy.transform.position.x < target.position.x)
             {
@@ -79,8 +75,9 @@ namespace Bananagodzilla
                     waitTime -= Time.deltaTime;
                 }
             }
-            
         }
+
+     
         
         void OnTriggerEnter2D(Collider2D col)
         {

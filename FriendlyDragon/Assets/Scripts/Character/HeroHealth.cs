@@ -28,7 +28,7 @@ namespace Bananagodzilla
 
         public void Hurt(int hurt)
         {
-            maxHealth-= hurt;
+            maxHealth = maxHealth - hurt;
         }
 
        
