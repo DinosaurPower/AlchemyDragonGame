@@ -268,7 +268,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 207213159, guid: 4b1ef939d743e463cabe9e996aabce2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -391,8 +391,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1838.9, y: 1017.49963}
-  m_SizeDelta: {x: 50.001606, y: 100}
+  m_AnchoredPosition: {x: -1845.2, y: 1009.8}
+  m_SizeDelta: {x: -31.373, y: 18.693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6958190371063613204
 GameObject:
@@ -466,7 +466,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 2076969287, guid: 4b1ef939d743e463cabe9e996aabce2b, type: 3}
   m_Color: {r: 0.7568628, g: 0.7176471, b: 0.5803922, a: 1}
   m_FlipX: 0
@@ -544,8 +544,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1769.3, y: 999.2}
-  m_SizeDelta: {x: 50.001606, y: 100}
+  m_AnchoredPosition: {x: -1790.5, y: 1010}
+  m_SizeDelta: {x: -31.373, y: 19.145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6958190371521016553
 GameObject:
@@ -580,8 +580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1832.8, y: 1044.2}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -1852.1, y: 1052.1}
+  m_SizeDelta: {x: 21.415, y: 20.952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6958190372072368848
 GameObject:
@@ -596,6 +596,7 @@ GameObject:
   - component: {fileID: 6958190372072368851}
   - component: {fileID: 6958190372072368850}
   - component: {fileID: 6958190372072368685}
+  - component: {fileID: 8877231941019904400}
   m_Layer: 3
   m_Name: Uni
   m_TagString: Enemy
@@ -657,6 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b292318ef84d65b435eb604b66421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  copyable: {fileID: 0}
   Interactable: 'Unicorn: please don''t kill me :,0'
   Text: {fileID: 0}
   Talk: {fileID: 0}
@@ -710,3 +712,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8877231941019904400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6958190372072368848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af65d129c246c4e1c809ab8104fcb120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Instantiatable:
+  - {fileID: 985911366730951511, guid: febef7eb3b3f24d318da0243f28d515c, type: 3}
+  - {fileID: 985911366730951511, guid: 26a7c34ea7d274c7ea6edbedae482b5c, type: 3}
+  - {fileID: 985911366730951511, guid: fb23469690826488796e92a7ccb88c7b, type: 3}

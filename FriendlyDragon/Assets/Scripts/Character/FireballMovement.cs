@@ -86,6 +86,13 @@ namespace Bananagodzilla
 
         private void OnTriggerEnter2D(Collider2D col)
         {
+            if (BallType == "key")
+            {
+                if (col.GetComponent<Cage>() != null)
+                {
+                    col.GetComponent<Cage>().Open();
+                }
+            }
             if (BallType == "build")
             {
                 Instantiate(Wall, GetComponent<Transform>().position, GetComponent<Transform>().rotation);

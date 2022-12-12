@@ -27,20 +27,22 @@ namespace Bananagodzilla
         void Update()
         {
            
-            if (rb.velocity.x < -1)
+            if (rb.velocity.x < -0.1)
             {
                 gameObject.GetComponent<Transform>().localScale = new Vector3(sc, sc, 0);
                 Direction = 1;
                 
             }
         
-            if (rb.velocity.x > 1)
+            if (rb.velocity.x > 0.1)
             {
                 gameObject.GetComponent<Transform>().localScale = new Vector3(-sc, sc, 0);
                 Direction = -1;
                
                 
             }
+
+            
             
         }
         

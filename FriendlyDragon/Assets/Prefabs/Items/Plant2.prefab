@@ -99,14 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b292318ef84d65b435eb604b66421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  copyable: {fileID: 0}
   Interactable: 'Bush: *stands*'
   Text: {fileID: 0}
   Talk: {fileID: 985911367808620069}
   Health: 1
   dropping:
-  - {fileID: 7963485816012478179, guid: 1f58d93edeccf472abc8a1550f5b5706, type: 3}
-  - {fileID: 7963485816012478179, guid: 1f58d93edeccf472abc8a1550f5b5706, type: 3}
-  - {fileID: 7963485816012478179, guid: 1f58d93edeccf472abc8a1550f5b5706, type: 3}
+  - {fileID: 7963485816012478179, guid: 755eb0d52f7314e73ad26300495ece81, type: 3}
+  - {fileID: 7963485816012478179, guid: 755eb0d52f7314e73ad26300495ece81, type: 3}
+  - {fileID: 7963485816012478179, guid: 755eb0d52f7314e73ad26300495ece81, type: 3}
   HPText: {fileID: 985911367808620068}
 --- !u!61 &985911366730951515
 BoxCollider2D:

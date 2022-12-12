@@ -30,7 +30,10 @@ namespace Bananagodzilla
             {
                 dragon = GameObject.FindGameObjectWithTag("Player");
             }
-
+            if (anim != false)
+            {
+                anim.SetBool("Walk", true);
+            }
 
         }
 
@@ -38,6 +41,7 @@ namespace Bananagodzilla
         {
             realEnemy.transform.position =
                 Vector2.MoveTowards(transform.position, target.position, basicSpeed * Time.deltaTime);
+          
             
             if (realEnemy.transform.position.x < target.position.x)
             {
@@ -51,15 +55,15 @@ namespace Bananagodzilla
 
 
 
-            if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 1f)
+            if (Vector2.Distance(transform.position, moveSpots[randomSpot].position) < 5f)
             {
                 if (waitTime <= 0)
                 {
+                    
                     if (anim != false)
                     {
                         anim.SetBool("Walk", true);
                     }
-
                     randomSpot = UnityEngine.Random.Range(0, moveSpots.Length - 1);
                     target = moveSpots[randomSpot];
                     waitTime = startWaitTime;

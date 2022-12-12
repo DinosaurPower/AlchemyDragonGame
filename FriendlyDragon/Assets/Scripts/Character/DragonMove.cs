@@ -11,7 +11,7 @@ namespace Bananagodzilla
   public float speed = 10.0f;
     public Rigidbody2D rb;
     public Vector3 movement;
-
+    public float el = 0.1f;
     public Animator anim;
     // Use this for initialization
     void Start()
@@ -24,7 +24,7 @@ namespace Bananagodzilla
     {
         movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
 
-        if (rb.velocity.x <= -1 || rb.velocity.x >= 1 || rb.velocity.y <= -1 || rb.velocity.y >= 1)
+        if (rb.velocity.x <= -el || rb.velocity.x >= el || rb.velocity.y <= -el || rb.velocity.y >= el)
         {
             anim.SetBool("IsWalking", true);
         }

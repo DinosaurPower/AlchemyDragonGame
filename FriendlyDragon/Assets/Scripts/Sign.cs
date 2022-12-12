@@ -17,7 +17,11 @@ public class Sign : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        txt.text = Interactable;
+        if (col.CompareTag("Player"))
+        {
+            txt.text = Interactable;  
+        }
+      
     }
 }
 }
